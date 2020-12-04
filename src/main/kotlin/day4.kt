@@ -9,6 +9,9 @@ fun main(args: Array<String>) {
     while(true){
         val tmp = reader.readLine()
         if (tmp==null){
+            if(!line.isEmpty()) {
+                passports.add(line)
+            }
             break
         } else if(tmp.isEmpty()) {
             if(!line.isEmpty()) {
