@@ -42,7 +42,7 @@ fun main(args: Array<String>) {
     }
 
     fun validateHcl(input: String): Boolean {
-        val ptrn = Regex("^[#][A-Za-z0-9]*$")
+        val ptrn = Regex("^[#][A-Za-z0-9]{6}$")
         val what = input.count() == 7 && ptrn.containsMatchIn(input)
         return what
     }
