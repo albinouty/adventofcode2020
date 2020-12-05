@@ -11,6 +11,7 @@ fun main(args: Array<String>) {
         if (tmp==null){
             if(!line.isEmpty()) {
                 passports.add(line)
+                println(passports[x])
             }
             break
         } else if(tmp.isEmpty()) {
@@ -103,6 +104,9 @@ fun main(args: Array<String>) {
                     validateValue(it)) {
                     1
                 } else 0
+//                if(resolveKey(it.substringBefore(":")) == "valid") {
+//                    1
+//                } else 0
             }
             if(validKeys.sum() >= 7) {
                 validPassports.add(k)
