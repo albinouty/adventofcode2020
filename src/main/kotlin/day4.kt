@@ -43,7 +43,7 @@ fun main(args: Array<String>) {
     }
 
     fun validateHcl(input: String): Boolean {
-        val ptrn = Regex("^[#][A-Za-z0-9]{6}$")
+        val ptrn = Regex("^[#][a-f0-9]{6}$")
         val what = input.count() == 7 && ptrn.containsMatchIn(input)
         return what
     }
@@ -69,7 +69,7 @@ fun main(args: Array<String>) {
         val what =  if(initPtrn.containsMatchIn(input)) {
             val height = numPtrn.find(input)!!.value.toInt()
             val unit = unitPtrn.find(input)!!.value
-            if(unit == "cm" && height in 150..190) {
+            if(unit == "cm" && height in 150..193) {
                 true
             } else {
                 unit == "in" && height in 59..76
